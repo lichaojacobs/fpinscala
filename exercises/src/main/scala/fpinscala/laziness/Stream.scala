@@ -135,10 +135,11 @@ trait Stream[+A] {
       (b2, cons(b2, p1._2))
     })._2
 
-  def scanRight3[B](z: B)(f: (A, => B) => B): Stream[B] =
-    foldRight(Stream(z)){
-      case (a:A, t@Cons(h:B, _)) => cons(f(a, h), t)
-    }
+  //为啥报错啊...
+//  def scanRight3[B](z: B)(f: (A, => B) => B): Stream[B] =
+//    foldRight(Stream(z)){
+//      case (a:A, t@Cons(h:B, _)) => cons(f(a, h), t)
+//    }
 }
 
 case object Empty extends Stream[Nothing]

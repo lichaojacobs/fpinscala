@@ -79,8 +79,8 @@ class StreamSuite extends FunSuite {
       List(6, 5, 3, 0))
     assert(Stream(1,2,3).scanRight2(0)(_ + _).toList() ==
       List(6, 5, 3, 0))
-    assert(Stream(1,2,3).scanRight3(0)(_ + _).toList() ==
-      List(6, 5, 3, 0))
+//    assert(Stream(1,2,3).scanRight3(0)(_ + _).toList() ==
+//      List(6, 5, 3, 0))
   }
 
 }
